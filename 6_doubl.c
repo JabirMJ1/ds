@@ -89,6 +89,7 @@ void insertion_beginning(){
 			head->prev=ptr;
 			head=ptr;
 		}
+
 		printf("\nNode Inserted\n");
 	}
 }
@@ -142,7 +143,7 @@ void insertion_specified()
 		temp=head;
 		printf("Enter the location: ");
 		scanf("%d", &loc);
-		for(i=0; i<loc; i++)
+		for(i=1; i<loc; i++)
 		{
 			temp=temp->next;
 			if(temp==NULL)
@@ -201,7 +202,7 @@ void deletion_last()
 	else
 	{
 		ptr=head;
-		if(ptr->next!=NULL)
+		while(ptr->next!=NULL)
 		{
 			ptr=ptr->next;
 		}
